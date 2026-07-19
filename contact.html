@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x26A1;</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact MC Motor Technology - sales team, engineering support, and global inquiries.">
+<meta property="og:title" content="Contact Us — MC Motor Technology">
+<meta property="og:description" content="Tell us about your application and our engineering team will respond within 24 hours. Two strategic bases in Shenzhen and Huizhou, China.">
+<meta property="og:type" content="website">
+<title>Contact Us — MC Motor Technology</title>
+<style>
+:root {
+  --navy: #1a2744;
+  --green: #1a6b3c;
+  --green-hover: #145a30;
+  --gold: #f59e0b;
+  --white: #ffffff;
+  --gray-50: #f8f9fa;
+  --gray-100: #f0f1f3;
+  --gray-200: #e2e4e7;
+  --gray-400: #9ca3af;
+  --gray-600: #6b7280;
+  --gray-800: #374151;
+  --gray-900: #111827;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color: var(--gray-800); line-height:1.7; background: var(--white); }
+
+/* NAV */
+nav { position:fixed; top:0; left:0; right:0; z-index:1000; background: rgba(255,255,255,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--gray-200); }
+.nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
+.nav-logo { font-size:1.2rem; font-weight:700; color:var(--navy); text-decoration:none; white-space:nowrap; }
+.nav-logo span { color:var(--green); }
+.nav-links { display:flex; align-items:center; gap:4px; list-style:none; }
+.nav-links a { color:var(--gray-600); text-decoration:none; padding:8px 14px; border-radius:6px; font-size:0.92rem; font-weight:500; transition:all 0.2s; }
+.nav-links a:hover, .nav-links a.active { color:var(--navy); background:var(--gray-100); }
+.nav-cta { background:var(--green) !important; color:#fff !important; font-weight:600 !important; padding:10px 20px !important; border-radius:6px !important; margin-left:8px; transition:background 0.2s !important; }
+.nav-cta:hover { background:var(--green-hover) !important; }
+.nav-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.nav-toggle span { display:block; width:24px; height:2px; background:var(--navy); border-radius:1px; transition:0.3s; }
+
+/* PAGE HERO */
+.page-hero { padding:130px 24px 60px; background: linear-gradient(135deg, var(--green), #0f4a28); color:#fff; text-align:center; }
+.page-hero h1 { font-size:clamp(1.8rem, 4vw, 2.6rem); font-weight:800; }
+.page-hero p { font-size:1.05rem; opacity:0.85; max-width:550px; margin:12px auto 0; }
+
+/* SECTION */
+section { padding:70px 24px; }
+.section-inner { max-width:1100px; margin:0 auto; }
+.section-label { display:inline-block; font-size:0.8rem; font-weight:700; letter-spacing:2px; color:var(--green); text-transform:uppercase; margin-bottom:8px; }
+.section-title { font-size:clamp(1.5rem, 2.5vw, 2rem); font-weight:700; color:var(--navy); margin-bottom:24px; }
+
+/* CONTACT LAYOUT */
+.contact-grid { display:grid; grid-template-columns: 1.1fr 0.9fr; gap:40px; align-items:start; }
+
+/* FORM */
+.contact-form { background:#fff; border-radius:var(--radius-lg); border:1px solid var(--gray-200); padding:36px; box-shadow:var(--shadow-sm); }
+.contact-form h3 { font-size:1.25rem; color:var(--navy); margin-bottom:6px; }
+.contact-form .sub { font-size:0.9rem; color:var(--gray-600); margin-bottom:24px; }
+.form-row { margin-bottom:18px; }
+.form-row label { display:block; font-size:0.85rem; font-weight:600; color:var(--gray-800); margin-bottom:6px; }
+.form-row input, .form-row select, .form-row textarea { width:100%; padding:12px 14px; border:1px solid var(--gray-200); border-radius:var(--radius); font-size:0.92rem; font-family:inherit; transition:border 0.2s; background:var(--gray-50); }
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline:none; border-color:var(--green); box-shadow:0 0 0 3px rgba(26,107,60,0.1); }
+.form-row textarea { resize:vertical; min-height:120px; }
+.form-submit { width:100%; padding:14px; background:var(--green); color:#fff; border:none; border-radius:var(--radius); font-size:1rem; font-weight:700; cursor:pointer; transition:all 0.25s; }
+.form-submit:hover { background:var(--green-hover); }
+
+/* CONTACT INFO CARDS */
+.contact-info { display:flex; flex-direction:column; gap:16px; }
+.info-card { background:#fff; border-radius:var(--radius-lg); border:1px solid var(--gray-200); padding:24px; transition:all 0.3s; }
+.info-card:hover { box-shadow:var(--shadow-md); }
+.info-card .icon { font-size:1.8rem; margin-bottom:8px; }
+.info-card h4 { font-size:1rem; color:var(--navy); margin-bottom:6px; }
+.info-card .detail { font-size:1.15rem; font-weight:700; color:var(--green); }
+.info-card p { font-size:0.88rem; color:var(--gray-600); margin-top:4px; }
+
+/* LOCATIONS */
+.locations { background:var(--gray-50); }
+.loc-grid { display:grid; grid-template-columns: 1fr 1fr; gap:24px; }
+.loc-card { background:#fff; border-radius:var(--radius-lg); border:1px solid var(--gray-200); padding:28px; }
+.loc-card h4 { font-size:1.05rem; color:var(--navy); margin-bottom:12px; }
+.loc-card p { font-size:0.9rem; color:var(--gray-600); line-height:1.8; }
+.loc-card .label { font-size:0.7rem; font-weight:700; letter-spacing:1.5px; color:var(--green); text-transform:uppercase; margin-bottom:6px; }
+
+/* PROMINENT CONTACT STRIP */
+.contact-strip { background:var(--green); color:#fff; text-align:center; padding:44px 24px; }
+.contact-strip h3 { font-size:1.4rem; margin-bottom:10px; }
+.contact-strip .strip-items { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:16px; }
+.contact-strip .strip-item { font-size:1.2rem; font-weight:700; }
+.contact-strip .strip-item a { color:#fff; text-decoration:none; transition:color 0.2s; }
+.contact-strip .strip-item a:hover { color:var(--gold); }
+
+/* FLOATING CONTACT — circular button */
+.floating-contact { position:fixed; right:10px; top:50%; transform:translateY(-50%); z-index:999; }
+.floating-contact:hover { z-index:1001; }
+.fc-btn { width:56px; height:56px; background:var(--green); color:#fff; border:none; cursor:pointer; border-radius:50%; font-size:1.5rem; box-shadow:0 4px 16px rgba(26,107,60,0.35); transition:all 0.3s ease; display:flex; align-items:center; justify-content:center; text-decoration:none; }
+.fc-btn:hover { background:var(--green-hover); box-shadow:0 6px 24px rgba(26,107,60,0.5); transform:scale(1.1); }
+.fc-panel { position:absolute; right:100%; margin-right:12px; top:50%; transform:translateY(-50%); width:260px; background:#fff; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); padding:20px; border:1px solid var(--gray-200); opacity:0; visibility:hidden; transition:opacity 0.3s ease, visibility 0.3s ease; }
+.floating-contact:hover .fc-panel { opacity:1; visibility:visible; }
+.fc-panel h4 { color:var(--navy); margin-bottom:10px; font-size:0.95rem; }
+.fc-panel a { display:block; padding:8px 0; color:var(--gray-800); text-decoration:none; border-bottom:1px solid var(--gray-100); font-size:0.9rem; transition:color 0.2s; }
+.fc-panel a:last-child { border-bottom:none; }
+.fc-panel a:hover { color:var(--green); }
+.fc-phone { font-size:1.15rem !important; font-weight:700; color:var(--green) !important; }
+
+/* FOOTER */
+footer { background:var(--gray-900); color:rgba(255,255,255,0.7); padding:50px 24px 30px; margin-top:20px; }
+.footer-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1.3fr; gap:40px; }
+.footer-col h4 { color:#fff; font-size:0.95rem; margin-bottom:16px; font-weight:600; }
+.footer-col a, .footer-col p { display:block; color:rgba(255,255,255,0.55); text-decoration:none; font-size:0.88rem; margin-bottom:8px; transition:color 0.2s; }
+.footer-col a:hover { color:#fff; }
+.footer-contact .big-phone { font-size:1.3rem; font-weight:700; color:var(--gold) !important; }
+.footer-contact .big-email { font-size:1rem; color:var(--green) !important; }
+.footer-bottom { max-width:1200px; margin:30px auto 0; padding-top:24px; border-top:1px solid rgba(255,255,255,0.1); text-align:center; font-size:0.82rem; color:rgba(255,255,255,0.35); }
+
+/* COOKIE CONSENT */
+.cookie-consent { position:fixed; bottom:0; left:0; right:0; z-index:9999; background:#fff; border-top:1px solid var(--gray-200); box-shadow:0 -2px 12px rgba(0,0,0,0.08); padding:16px 24px; display:none; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; font-size:0.9rem; color:var(--gray-600); }
+.cookie-consent.show { display:flex; }
+.cookie-consent p { margin:0; max-width:600px; line-height:1.5; }
+.cookie-consent .cc-btns { display:flex; gap:10px; flex-shrink:0; }
+.cc-btn { padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; border:none; transition:all 0.2s; font-family:inherit; }
+.cc-accept { background:var(--green); color:#fff; }
+.cc-accept:hover { background:var(--green-hover); }
+.cc-decline { background:var(--gray-100); color:var(--gray-600); border:1px solid var(--gray-200); }
+.cc-decline:hover { background:var(--gray-200); }
+@media (max-width:640px) { .cookie-consent { flex-direction:column; text-align:center; padding:14px 16px; } }
+
+@media (max-width: 800px) { .contact-grid, .loc-grid { grid-template-columns: 1fr; } .footer-inner { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) {
+  .nav-links { display:none; position:absolute; top:64px; left:0; right:0; background:#fff; flex-direction:column; padding:12px; gap:0; border-bottom:1px solid var(--gray-200); box-shadow:var(--shadow-md); }
+  .nav-links.open { display:flex; }
+  .nav-toggle { display:flex; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .contact-strip .strip-items { flex-direction:column; gap:12px; align-items:center; }
+}
+@media print {
+  nav, .floating-contact, footer { display: none; }
+  body { background: white; color: black; }
+  .section { padding: 1rem 0; break-inside: avoid; }
+  table { font-size: 10pt; }
+}
+</style>
+
+<!-- Schema.org Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MC Motor Technology",
+  "url": "https://mcmotor.com",
+  "logo": "https://mcmotor.com/logo.png",
+  "description": "High-speed permanent magnet synchronous motor and energy-saving centrifugal blower manufacturer.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+86-755-89364100",
+    "contactType": "sales",
+    "email": "mc@mcmotor.cn",
+    "availableLanguage": ["English", "Chinese"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Room 1402, Building 2, No.9 Guang'an Road, Fengtai District",
+    "addressLocality": "Beijing",
+    "addressCountry": "CN"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-consent" id="cookieConsent">
+  <p>This website uses cookies to improve your experience. By continuing to browse, you agree to our use of cookies.</p>
+  <div class="cc-btns">
+    <button class="cc-btn cc-accept" onclick="acceptCookies()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Accept</button>
+    <button class="cc-btn cc-decline" onclick="declineCookies()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Decline</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">MC<span>Motor</span></a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products-motors.html">Motors</a></li>
+      <li><a href="products-blowers.html">Blowers</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO (green theme for contact) -->
+<section class="page-hero">
+  <h1>Let's Talk</h1>
+  <p>Tell us about your application and our engineering team will respond within 24 hours.</p>
+</section>
+
+<!-- PROMINENT CONTACT STRIP -->
+<div class="contact-strip">
+  <h3><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Ready to Reach Us Directly?</h3>
+  <div class="strip-items">
+    <div class="strip-item"><a href="tel:+86-755-89364100"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +86 755-89364100</a></div>
+    <div class="strip-item"><a href="mailto:info@mcmotor.com"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@mcmotor.com</a></div>
+  </div>
+</div>
+
+<!-- CONTACT FORM + INFO -->
+<section>
+  <div class="section-inner">
+    <div class="contact-grid">
+      <!-- FORM -->
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <p class="sub">Fill out the form below and we'll get back to you within one business day.</p>
+        <form action="mailto:mc@mcmotor.cn" method="POST" enctype="text/plain">
+          <div class="form-row">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-row">
+            <label for="company">Company *</label>
+            <input type="text" id="company" name="company" required placeholder="Company name">
+          </div>
+          <div class="form-row">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+86 / +1 / ...">
+          </div>
+          <div class="form-row">
+            <label for="interest">I'm Interested In *</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select a product line...</option>
+              <option value="motors">Industrial Motors</option>
+              <option value="blowers-exhaust">Exhaust Blowers</option>
+              <option value="blowers-dust">Dust Collection Blowers</option>
+              <option value="blowers-wastewater">Electroplating & Wastewater Blowers</option>
+              <option value="blowers-airknife">Air Knife Blowers</option>
+              <option value="custom">Custom / OEM Solution</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required placeholder="Tell us about your application, requirements, and any questions..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message →</button>
+        </form>
+        <div id="form-success" style="display:none;text-align:center;padding:20px;color:var(--green);font-weight:600;font-size:1.1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Thank you! We'll be in touch within 24 hours.</div>
+      </div>
+
+      <!-- INFO -->
+      <div class="contact-info">
+        <div class="info-card">
+          <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <h4>Call Us</h4>
+          <a href="tel:+86-755-89364100" class="detail" style="text-decoration:none;">+86 755-89364100</a>
+          <p>Available during business hours (GMT+8)</p>
+        </div>
+        <div class="info-card">
+          <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <h4>Email Us</h4>
+          <a href="mailto:info@mcmotor.com" class="detail" style="text-decoration:none;">info@mcmotor.com</a>
+          <p>We respond to all inquiries within 24 hours</p>
+        </div>
+        <div class="info-card">
+          <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h4>Website</h4>
+          <a href="https://mcmotor.com" class="detail" style="text-decoration:none;" target="_blank">www.mcmotor.com</a>
+          <p>Visit our main site for the latest updates</p>
+        </div>
+        <div class="info-card">
+          <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h4>Business Hours</h4>
+          <div class="detail">Mon–Fri, 9:00–18:00</div>
+          <p>China Standard Time (UTC+8)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations">
+  <div class="section-inner">
+    <span class="section-label">Our Locations</span>
+    <h2 class="section-title">Two Strategic Bases</h2>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <div class="label">Headquarters & R&D</div>
+        <h4>Shenzhen, Guangdong</h4>
+        <p>
+          <strong>MC Motor Technology (Shenzhen) Co., Ltd.</strong><br>
+          Shenzhen, Guangdong Province, China<br><br>
+          Our corporate headquarters houses R&D, engineering, and business operations.
+        </p>
+      </div>
+      <div class="loc-card">
+        <div class="label">Manufacturing Base</div>
+        <h4>Huizhou, Guangdong</h4>
+        <p>
+          Building A, Little Dolphin Science and Technology Park<br>
+          No. 6, Dong'an 1st Road, Shatian Town<br>
+          Huiyang District, Huizhou City<br>
+          Guangdong Province, China<br><br>
+          Our manufacturing facility features world-class automated production lines.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>MC Motor Technology</h4>
+      <p>A high-tech enterprise specializing in next-generation permanent magnet motor systems and high-speed centrifugal blowers. Driven by innovation, built for reliability.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="products-motors.html">Industrial Motors</a>
+      <a href="products-blowers.html">Centrifugal Blowers</a>
+      <a href="about.html">R&D Capabilities</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html#quality">Quality Systems</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Get in Touch</h4>
+      <a href="tel:+86-755-89364100" class="big-phone"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +86 755-89364100</a>
+      <a href="mailto:info@mcmotor.com" class="big-email"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@mcmotor.com</a>
+      <p style="font-size:0.82rem;margin-top:8px;">Shenzhen · Huizhou, China</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 MC Motor Technology (Shenzhen) Co., Ltd. All rights reserved.</div>
+</footer>
+
+<!-- FLOATING CONTACT — circular button -->
+<div class="floating-contact" id="floatingContact">
+  <div class="fc-panel" id="fcPanel">
+    <h4><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v1"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 1 0-4 0v8"/><path d="M18 8a2 2 0 1 0-4 0v7c0 1.94-.33 3.7-1.36 5.24a1 1 0 0 1-1.69.13C8.98 17.94 6 15.39 6 12V9a2 2 0 1 0-4 0v4.5"/></svg> Quick Contact</h4>
+    <a href="tel:+86-755-89364100" class="fc-phone"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +86 755-89364100</a>
+    <a href="mailto:info@mcmotor.com"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@mcmotor.com</a>
+  </div>
+  <a href="contact.html" class="fc-btn"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+</div>
+
+<!-- Form submits via mailto: to mc@mcmotor.cn -->
+<!-- COOKIE CONSENT & GA4 SCRIPTS -->
+<script>
+(function(){
+  var consent = localStorage.getItem('cookieConsent');
+  if (consent === null) {
+    document.getElementById('cookieConsent').classList.add('show');
+  } else if (consent === 'accepted') {
+    loadGA();
+  }
+})();
+function acceptCookies() {
+  localStorage.setItem('cookieConsent', 'accepted');
+  document.getElementById('cookieConsent').classList.remove('show');
+  loadGA();
+}
+function declineCookies() {
+  localStorage.setItem('cookieConsent', 'declined');
+  document.getElementById('cookieConsent').classList.remove('show');
+}
+function loadGA() {
+  var gaScript = document.createElement('script');
+  gaScript.async = true;
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+  document.head.appendChild(gaScript);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+}
+</script>
+
+</body>
+</html>
