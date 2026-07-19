@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x26A1;</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MC Motor Technology - High-speed PMSM motors and energy-saving centrifugal blowers for industrial applications.">
+<meta property="og:title" content="MC Motor Technology — Precision Meets Sustainability">
+<meta property="og:description" content="MC Motor Technology delivers next-generation high-efficiency permanent magnet motors and high-speed centrifugal blowers — engineered to outperform, built to last.">
+<meta property="og:type" content="website">
+<title>MC Motor Technology — Precision Meets Sustainability</title>
+<style>
+:root {
+  --navy: #1a2744;
+  --green: #1a6b3c;
+  --green-hover: #145a30;
+  --gold: #f59e0b;
+  --white: #ffffff;
+  --gray-50: #f8f9fa;
+  --gray-100: #f0f1f3;
+  --gray-200: #e2e4e7;
+  --gray-400: #9ca3af;
+  --gray-600: #6b7280;
+  --gray-800: #374151;
+  --gray-900: #111827;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color: var(--gray-800); line-height:1.7; background: var(--white); }
+
+/* NAV */
+nav { position:fixed; top:0; left:0; right:0; z-index:1000; background: rgba(255,255,255,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--gray-200); }
+.nav-inner { max-width:1200px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:64px; }
+.nav-logo { font-size:1.2rem; font-weight:700; color:var(--navy); text-decoration:none; white-space:nowrap; }
+.nav-logo span { color:var(--green); }
+.nav-links { display:flex; align-items:center; gap:4px; list-style:none; }
+.nav-links a { color:var(--gray-600); text-decoration:none; padding:8px 14px; border-radius:6px; font-size:0.92rem; font-weight:500; transition:all 0.2s; }
+.nav-links a:hover, .nav-links a.active { color:var(--navy); background:var(--gray-100); }
+.nav-cta { background:var(--green) !important; color:#fff !important; font-weight:600 !important; padding:10px 20px !important; border-radius:6px !important; margin-left:8px; transition:background 0.2s !important; }
+.nav-cta:hover { background:var(--green-hover) !important; }
+.nav-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.nav-toggle span { display:block; width:24px; height:2px; background:var(--navy); border-radius:1px; transition:0.3s; }
+
+/* HERO */
+.hero { padding:140px 24px 80px; background: linear-gradient(135deg, var(--navy) 0%, #243b5e 60%, #1a4a3a 100%); color:#fff; text-align:center; position:relative; overflow:hidden; }
+.hero::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse at 30% 20%, rgba(245,158,11,0.12) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(26,107,60,0.2) 0%, transparent 60%); }
+.hero-inner { max-width:900px; margin:0 auto; position:relative; z-index:1; }
+.hero h1 { font-size:clamp(2rem, 5vw, 3.2rem); font-weight:800; line-height:1.2; margin-bottom:20px; }
+.hero h1 span { color:var(--gold); }
+.hero p { font-size:1.15rem; color:rgba(255,255,255,0.8); max-width:650px; margin:0 auto 36px; line-height:1.7; }
+.hero-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.hero-btns a { display:inline-block; padding:14px 32px; border-radius:8px; font-weight:600; font-size:1rem; text-decoration:none; transition:all 0.25s; }
+.btn-primary { background:var(--green); color:#fff; }
+.btn-primary:hover { background:var(--green-hover); transform:translateY(-2px); box-shadow:0 6px 20px rgba(26,107,60,0.4); }
+.btn-outline { border:2px solid rgba(255,255,255,0.5); color:#fff; }
+.btn-outline:hover { border-color:#fff; background:rgba(255,255,255,0.08); }
+
+/* SECTION HEADERS */
+section { padding:80px 24px; }
+.section-inner { max-width:1200px; margin:0 auto; }
+.section-label { display:inline-block; font-size:0.8rem; font-weight:700; letter-spacing:2px; color:var(--green); text-transform:uppercase; margin-bottom:8px; }
+.section-title { font-size:clamp(1.6rem, 3vw, 2.2rem); font-weight:700; color:var(--navy); margin-bottom:12px; }
+.section-sub { font-size:1.05rem; color:var(--gray-600); max-width:600px; margin-bottom:40px; }
+
+/* PRODUCT ENTRY CARDS */
+.products-entry { background:var(--gray-50); }
+.product-grid { display:grid; grid-template-columns: 1fr 1fr; gap:28px; }
+.product-card { background:#fff; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-sm); border:1px solid var(--gray-200); transition:all 0.3s; display:flex; flex-direction:column; }
+.product-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-4px); }
+.card-img { height:200px; display:flex; align-items:center; justify-content:center; font-size:4rem; }
+.card-img.motors { background:linear-gradient(135deg, #e8edf5, #d0d9e8); }
+.card-img.blowers { background:linear-gradient(135deg, #e2ece6, #c5d9cc); }
+.card-body { padding:28px; flex:1; display:flex; flex-direction:column; }
+.card-body h3 { font-size:1.35rem; color:var(--navy); margin-bottom:8px; }
+.card-body p { color:var(--gray-600); font-size:0.95rem; margin-bottom:20px; flex:1; }
+.card-stats { display:flex; gap:20px; margin-bottom:20px; flex-wrap:wrap; }
+.card-stat { text-align:center; }
+.card-stat .num { font-size:1.4rem; font-weight:700; color:var(--green); }
+.card-stat .lbl { font-size:0.75rem; color:var(--gray-400); }
+.card-cta { display:inline-block; padding:10px 24px; background:var(--green); color:#fff; border-radius:6px; text-decoration:none; font-weight:600; font-size:0.9rem; text-align:center; transition:all 0.25s; align-self:flex-start; }
+.card-cta:hover { background:var(--green-hover); }
+
+/* TECH ADVANTAGES */
+.advantages { background:var(--white); }
+.adv-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:24px; }
+.adv-card { text-align:center; padding:32px 20px; border-radius:var(--radius-lg); border:1px solid var(--gray-200); transition:all 0.3s; }
+.adv-card:hover { box-shadow:var(--shadow-md); border-color:transparent; }
+.adv-icon { font-size:2.4rem; margin-bottom:14px; }
+.adv-card h4 { font-size:1.05rem; color:var(--navy); margin-bottom:8px; }
+.adv-card p { font-size:0.88rem; color:var(--gray-600); }
+
+/* NUMBERS STRIP */
+.numbers-strip { background:var(--navy); color:#fff; padding:60px 24px; }
+.numbers-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:24px; text-align:center; }
+.num-item .big { font-size:2.4rem; font-weight:800; color:var(--gold); }
+.num-item .lbl { font-size:0.9rem; color:rgba(255,255,255,0.7); margin-top:4px; }
+
+/* INDUSTRIES */
+.industries { background:var(--gray-50); }
+.tag-cloud { display:flex; flex-wrap:wrap; gap:10px; }
+.tag { padding:8px 18px; border-radius:20px; font-size:0.85rem; font-weight:500; border:1px solid var(--gray-200); background:#fff; color:var(--gray-800); transition:all 0.2s; }
+.tag:hover { border-color:var(--green); color:var(--green); }
+
+/* CTA SECTION */
+.cta-section { background:linear-gradient(135deg, var(--green), #0f4a28); color:#fff; text-align:center; padding:80px 24px; }
+.cta-section h2 { font-size:clamp(1.8rem, 3vw, 2.3rem); font-weight:700; margin-bottom:16px; }
+.cta-section p { font-size:1.05rem; opacity:0.85; max-width:550px; margin:0 auto 30px; }
+.cta-section .btn-outline { border-color:rgba(255,255,255,0.6); }
+.cta-section .btn-outline:hover { border-color:#fff; background:rgba(255,255,255,0.12); }
+
+/* FLOATING CONTACT — circular button */
+.floating-contact { position:fixed; right:10px; top:50%; transform:translateY(-50%); z-index:999; }
+.floating-contact:hover { z-index:1001; }
+.fc-btn { width:56px; height:56px; background:var(--green); color:#fff; border:none; cursor:pointer; border-radius:50%; font-size:1.5rem; box-shadow:0 4px 16px rgba(26,107,60,0.35); transition:all 0.3s ease; display:flex; align-items:center; justify-content:center; text-decoration:none; }
+.fc-btn:hover { background:var(--green-hover); box-shadow:0 6px 24px rgba(26,107,60,0.5); transform:scale(1.1); }
+.fc-panel { position:absolute; right:100%; margin-right:12px; top:50%; transform:translateY(-50%); width:260px; background:#fff; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); padding:20px; border:1px solid var(--gray-200); opacity:0; visibility:hidden; transition:opacity 0.3s ease, visibility 0.3s ease; }
+.floating-contact:hover .fc-panel { opacity:1; visibility:visible; }
+.fc-panel h4 { color:var(--navy); margin-bottom:10px; font-size:0.95rem; }
+.fc-panel a { display:block; padding:8px 0; color:var(--gray-800); text-decoration:none; border-bottom:1px solid var(--gray-100); font-size:0.9rem; transition:color 0.2s; }
+.fc-panel a:last-child { border-bottom:none; }
+.fc-panel a:hover { color:var(--green); }
+.fc-phone { font-size:1.15rem !important; font-weight:700; color:var(--green) !important; }
+
+/* FOOTER */
+footer { background:var(--gray-900); color:rgba(255,255,255,0.7); padding:50px 24px 30px; }
+.footer-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1.3fr; gap:40px; }
+.footer-col h4 { color:#fff; font-size:0.95rem; margin-bottom:16px; font-weight:600; }
+.footer-col a, .footer-col p { display:block; color:rgba(255,255,255,0.55); text-decoration:none; font-size:0.88rem; margin-bottom:8px; transition:color 0.2s; }
+.footer-col a:hover { color:#fff; }
+.footer-contact .big-phone { font-size:1.3rem; font-weight:700; color:var(--gold) !important; }
+.footer-contact .big-email { font-size:1rem; color:var(--green) !important; }
+.footer-bottom { max-width:1200px; margin:30px auto 0; padding-top:24px; border-top:1px solid rgba(255,255,255,0.1); text-align:center; font-size:0.82rem; color:rgba(255,255,255,0.35); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .product-grid, .adv-grid, .numbers-grid { grid-template-columns: 1fr 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .nav-links { display:none; position:absolute; top:64px; left:0; right:0; background:#fff; flex-direction:column; padding:12px; gap:0; border-bottom:1px solid var(--gray-200); box-shadow:var(--shadow-md); }
+  .nav-links.open { display:flex; }
+  .nav-toggle { display:flex; }
+  .product-grid, .adv-grid, .numbers-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .hero h1 { font-size:1.8rem; }
+  .hero-btns { flex-direction:column; align-items:center; }
+  section { padding:50px 16px; }
+}
+
+/* COOKIE CONSENT */
+.cookie-consent { position:fixed; bottom:0; left:0; right:0; z-index:9999; background:#fff; border-top:1px solid var(--gray-200); box-shadow:0 -2px 12px rgba(0,0,0,0.08); padding:16px 24px; display:none; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; font-size:0.9rem; color:var(--gray-600); }
+.cookie-consent.show { display:flex; }
+.cookie-consent p { margin:0; max-width:600px; line-height:1.5; }
+.cookie-consent .cc-btns { display:flex; gap:10px; flex-shrink:0; }
+.cc-btn { padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; border:none; transition:all 0.2s; font-family:inherit; }
+.cc-accept { background:var(--green); color:#fff; }
+.cc-accept:hover { background:var(--green-hover); }
+.cc-decline { background:var(--gray-100); color:var(--gray-600); border:1px solid var(--gray-200); }
+.cc-decline:hover { background:var(--gray-200); }
+@media (max-width:640px) { .cookie-consent { flex-direction:column; text-align:center; padding:14px 16px; } }
+@media print {
+  nav, .floating-contact, footer { display: none; }
+  body { background: white; color: black; }
+  .section { padding: 1rem 0; break-inside: avoid; }
+  table { font-size: 10pt; }
+}
+</style>
+
+<!-- Schema.org Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MC Motor Technology",
+  "url": "https://mcmotor.com",
+  "logo": "https://mcmotor.com/logo.png",
+  "description": "High-speed permanent magnet synchronous motor and energy-saving centrifugal blower manufacturer.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+86-755-89364100",
+    "contactType": "sales",
+    "email": "mc@mcmotor.cn",
+    "availableLanguage": ["English", "Chinese"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Room 1402, Building 2, No.9 Guang'an Road, Fengtai District",
+    "addressLocality": "Beijing",
+    "addressCountry": "CN"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-consent" id="cookieConsent">
+  <p>This website uses cookies to improve your experience. By continuing to browse, you agree to our use of cookies.</p>
+  <div class="cc-btns">
+    <button class="cc-btn cc-accept" onclick="acceptCookies()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Accept</button>
+    <button class="cc-btn cc-decline" onclick="declineCookies()"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Decline</button>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">MC<span>Motor</span></a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products-motors.html">Motors</a></li>
+      <li><a href="products-blowers.html">Blowers</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Precision Drive. <span>Sustainable Future.</span></h1>
+    <p>MC Motor Technology delivers next-generation high-efficiency permanent magnet motors and high-speed centrifugal blowers — engineered to outperform, built to last.</p>
+    <div class="hero-btns">
+      <a href="products-motors.html" class="btn-primary">Explore Motors</a>
+      <a href="products-blowers.html" class="btn-outline">Explore Blowers</a>
+    </div>
+  </div>
+</section>
+
+<!-- DUAL PRODUCT ENTRY -->
+<section class="products-entry">
+  <div class="section-inner">
+    <span class="section-label">Our Products</span>
+    <h2 class="section-title">Two Core Lines. Infinite Applications.</h2>
+    <p class="section-sub">From ultra-high-speed motors to energy-saving centrifugal blowers — purpose-built for modern industry.</p>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="card-img motors"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="card-body">
+          <h3>High-Performance Motors</h3>
+          <p>Permanent magnet synchronous motors with up to 97.6% efficiency. Speeds up to 100,000 rpm for compressors, pumps, UAVs, and industrial drives.</p>
+          <div class="card-stats">
+            <div class="card-stat"><div class="num">97.6%</div><div class="lbl">Peak Efficiency</div></div>
+            <div class="card-stat"><div class="num">100k</div><div class="lbl">Max RPM</div></div>
+            <div class="card-stat"><div class="num">IE4+</div><div class="lbl">Efficiency Class</div></div>
+          </div>
+          <a href="products-motors.html" class="card-cta">View Motors →</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="card-img blowers"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
+        <div class="card-body">
+          <h3>High-Speed Centrifugal Blowers</h3>
+          <p>Direct-drive, oil-free blowers for exhaust, dust collection, wastewater treatment, and air knife drying. Energy savings up to 30% vs. traditional blowers.</p>
+          <div class="card-stats">
+            <div class="card-stat"><div class="num">75kW</div><div class="lbl">Max Power</div></div>
+            <div class="card-stat"><div class="num">30%</div><div class="lbl">Energy Saved</div></div>
+            <div class="card-stat"><div class="num">4</div><div class="lbl">Blower Series</div></div>
+          </div>
+          <a href="products-blowers.html" class="card-cta">View Blowers →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH ADVANTAGES -->
+<section class="advantages">
+  <div class="section-inner">
+    <span class="section-label">Why MC Motor</span>
+    <h2 class="section-title">Technology That Drives Performance</h2>
+    <p class="section-sub">Our motors and blowers are engineered around four pillars of excellence.</p>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <div class="adv-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h4>Ultra-High Efficiency</h4>
+        <p>Exceeding IE4 standards, up to 97.6% efficiency across the full speed range — dramatically lower your energy costs.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v4l4 8H5l4-8z"/><circle cx="12" cy="17" r="3"/></svg></div>
+        <h4>Advanced Materials</h4>
+        <p>N46EH grade NdFeB magnets, ceramic bearings, custom low-loss silicon steel — top-tier components, zero compromise.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></div>
+        <h4>Low Noise & Vibration</h4>
+        <p>Purpose-designed NVH optimization through multi-physics simulation — ideal for noise-sensitive environments.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>Reliability Built-In</h4>
+        <p>ISO 9001 / ISO 14001 / IATF 16949 certified. Thousands of hours of continuous load testing behind every design.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<div class="numbers-strip">
+  <div class="section-inner">
+    <div class="numbers-grid">
+      <div class="num-item"><div class="big">100+</div><div class="lbl">Core Patents Worldwide</div></div>
+      <div class="num-item"><div class="big">100k</div><div class="lbl">Max RPM Achieved</div></div>
+      <div class="num-item"><div class="big">97.6%</div><div class="lbl">Peak Motor Efficiency</div></div>
+      <div class="num-item"><div class="big">4 Series</div><div class="lbl">Blower Product Lines</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- INDUSTRIES -->
+<section class="industries">
+  <div class="section-inner">
+    <span class="section-label">Industries Served</span>
+    <h2 class="section-title">Powering Diverse Applications</h2>
+    <p class="section-sub">Our products are deployed across a wide range of demanding industrial environments.</p>
+    <div class="tag-cloud">
+      <span class="tag">Compressor Systems</span>
+      <span class="tag">Pumps & Fluid Handling</span>
+      <span class="tag">HVAC & Ventilation</span>
+      <span class="tag">PCB Manufacturing</span>
+      <span class="tag">Electroplating Lines</span>
+      <span class="tag">Chemical Processing</span>
+      <span class="tag">Wastewater Treatment</span>
+      <span class="tag">Dust Collection</span>
+      <span class="tag">Food & Pharmaceutical</span>
+      <span class="tag">UAV & Robotics</span>
+      <span class="tag">New Energy Vehicles</span>
+      <span class="tag">Air Knife Drying</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-inner">
+    <h2>Ready to Upgrade Your Drive System?</h2>
+    <p>Our engineering team is ready to discuss your application. Get a custom solution tailored to your exact requirements.</p>
+    <a href="contact.html" class="btn-outline" style="font-size:1.1rem;padding:16px 40px;">Get in Touch →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>MC Motor Technology</h4>
+      <p>A high-tech enterprise specializing in next-generation permanent magnet motor systems and high-speed centrifugal blowers. Driven by innovation, built for reliability.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="products-motors.html">Industrial Motors</a>
+      <a href="products-blowers.html">Centrifugal Blowers</a>
+      <a href="about.html">R&D Capabilities</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html#quality">Quality Systems</a>
+    </div>
+    <div class="footer-col footer-contact">
+      <h4>Get in Touch</h4>
+      <a href="tel:+86-755-89364100" class="big-phone"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +86 755-89364100</a>
+      <a href="mailto:info@mcmotor.com" class="big-email"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@mcmotor.com</a>
+      <p style="font-size:0.82rem;margin-top:8px;">Shenzhen · Huizhou, China</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 MC Motor Technology (Shenzhen) Co., Ltd. All rights reserved.
+  </div>
+</footer>
+
+<!-- FLOATING CONTACT — circular button -->
+<div class="floating-contact" id="floatingContact">
+  <div class="fc-panel" id="fcPanel">
+    <h4><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v1"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 1 0-4 0v8"/><path d="M18 8a2 2 0 1 0-4 0v7c0 1.94-.33 3.7-1.36 5.24a1 1 0 0 1-1.69.13C8.98 17.94 6 15.39 6 12V9a2 2 0 1 0-4 0v4.5"/></svg> Quick Contact</h4>
+    <a href="tel:+86-755-89364100" class="fc-phone"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +86 755-89364100</a>
+    <a href="mailto:info@mcmotor.com"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@mcmotor.com</a>
+  </div>
+  <a href="contact.html" class="fc-btn"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></a>
+</div>
+
+<!-- COOKIE CONSENT & GA4 SCRIPTS -->
+<script>
+(function(){
+  var consent = localStorage.getItem('cookieConsent');
+  if (consent === null) {
+    document.getElementById('cookieConsent').classList.add('show');
+  } else if (consent === 'accepted') {
+    loadGA();
+  }
+})();
+function acceptCookies() {
+  localStorage.setItem('cookieConsent', 'accepted');
+  document.getElementById('cookieConsent').classList.remove('show');
+  loadGA();
+}
+function declineCookies() {
+  localStorage.setItem('cookieConsent', 'declined');
+  document.getElementById('cookieConsent').classList.remove('show');
+}
+function loadGA() {
+  var gaScript = document.createElement('script');
+  gaScript.async = true;
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+  document.head.appendChild(gaScript);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+}
+</script>
+
+</body>
+</html>
